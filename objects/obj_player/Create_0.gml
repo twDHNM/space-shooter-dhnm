@@ -2,7 +2,7 @@
 
 #region variaveis
 
-
+nvl_tiro = 1
 vel = 2
 atirado = 0
 tempo_atirar = 0.16

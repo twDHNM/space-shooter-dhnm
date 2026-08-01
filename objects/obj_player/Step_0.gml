@@ -28,12 +28,33 @@ if keyboard_check_pressed(vk_escape) game_end()
 
 #endregion
 
+if keyboard_check_pressed(vk_up)
+{
+	nvl_tiro = 2
+}
+if keyboard_check_pressed(vk_down)
+{
+	nvl_tiro = 1
+}
+
+show_debug_message(nvl_tiro)
 
 
 //iniciando uma instancia de obj tiro na camada de tirona posiçao do player
-if atirando and atirado == 0
+if atirando and atirado == 0 and nvl_tiro == 1
 {
 	instance_create_layer(x,y,"isnt_tiro",obj_tiro)
 	atirado = 1
 	alarm[0] = tempo_atirar * 60
 }
+
+//tiro 2
+if atirando and atirado == 0 and nvl_tiro == 2
+{
+	instance_create_layer(x-10,y,"isnt_tiro",obj_tiro)
+	instance_create_layer(x+10,y,"isnt_tiro",obj_tiro)
+	atirado = 1
+	alarm[0] = tempo_atirar * 60
+}
+
+
