@@ -1,0 +1,3 @@
+
+
+global.invencibilidade = 0
