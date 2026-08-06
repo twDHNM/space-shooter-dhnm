@@ -14,7 +14,7 @@ nvl_tiro = 1
 atirado = 0
 tempo_atirar = 0.16
 //fisica
-vel = 2
+vel = 4
 //valores minimos e maximos de power up de tiro
 nvl_min = 1
 nvl_max = 3
@@ -64,6 +64,8 @@ perde_vida = function()
 		else
 		{
 			audio_play_sound(sfx_lose,1,0)
+			audio_play_sound(sfx_explosion,1,0,0.2)
+			instance_create_layer(x,y,layer,obj_particula_explosao)
 			instance_destroy()
 		}
 }

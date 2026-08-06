@@ -1,6 +1,15 @@
 
 
-tempo_tiro_inimigo = 2
+
+alarm[0] = 2 * 60
+
+criado_em_sequence = in_sequence
 
 
-alarm[0] = tempo_tiro_inimigo * 60
+chance_pu = function()
+{
+	var _chance_pu = random(100)
+	
+	if _chance_pu >= 90 instance_create_layer(x,y,layer,obj_pup1)
+	
+}
