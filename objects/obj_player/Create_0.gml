@@ -9,6 +9,7 @@ escudo_on = 0
 global.invencibilidade = 0
 tempo_invencibilidade = 1
 global.tempo_escudo = 2
+
 //tiro
 nvl_tiro = 1
 atirado = 0
@@ -66,6 +67,7 @@ perde_vida = function()
 			audio_play_sound(sfx_lose,1,0)
 			audio_play_sound(sfx_explosion,1,0,0.2)
 			instance_create_layer(x,y,layer,obj_particula_explosao)
+			global.existe = 0
 			instance_destroy()
 		}
 }

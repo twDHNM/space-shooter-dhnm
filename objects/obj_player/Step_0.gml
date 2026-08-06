@@ -14,10 +14,7 @@ controla_player()  //chama a funçao feita no create, assim funcionando no step
 
 #region DEBUG
 
-//iniciando debug | comandos de debug
-if keyboard_check_pressed(vk_tab) global.debug = !global.debug
 if keyboard_check_pressed(vk_enter) and !global.invencibilidade perde_vida()
-
 
 
 
